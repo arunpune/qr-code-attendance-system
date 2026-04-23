@@ -77,7 +77,7 @@ if ($_SESSION['usertype'] != 'STUDENT') {
 </div>
 <!-- Blank End -->
 
-<script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/schmich/instascan-builds@master/instascan.min.js"></script>
 <!-- <script type="text/javascript">
     
 </script> -->
@@ -121,13 +121,13 @@ if ($_SESSION['usertype'] != 'STUDENT') {
                 scanner.start(cameras[0]);
                 $('[name="options"]').on('change', function() {
                     if ($(this).val() == 1) {
-                        if (cameras[0] != "") {
+                        if (cameras[0]) {
                             scanner.start(cameras[0]);
                         } else {
                             alert('No Front camera found!');
                         }
                     } else if ($(this).val() == 2) {
-                        if (cameras[1] != "") {
+                        if (cameras[1]) {
                             scanner.start(cameras[1]);
                         } else {
                             alert('No Back camera found!');
